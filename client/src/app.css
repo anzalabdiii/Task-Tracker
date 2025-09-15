@@ -1,0 +1,202 @@
+/* General container */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Page title */
+h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #e84393;
+}
+
+/* Form styling */
+.task-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.task-form input,
+.task-form select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.add-btn {
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #e84118;
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #f8f9fa;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.task-text {
+  flex: 1;
+  text-align: left;
+  cursor: pointer;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* Due date styling */
+.due-date {
+  font-size: 12px;
+  color: #555;
+  margin-left: 8px;
+}
+
+/* Priority labels */
+.priority {
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.priority.low {
+  background: #dff9fb;
+  color: #22a6b3;
+}
+
+.priority.medium {
+  background: #fff8e1;
+  color: #e1b12c;
+}
+
+.priority.high {
+  background: #ffe6e6;
+  color: #e74c3c;
+}
+
+/* Delete button */
+.delete-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #e84118;
+}
+
+/* Clear all button */
+.clear-btn {
+  margin-top: 15px;
+  background: #576574;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.clear-btn:hover {
+  background: #2f3542;
+}
+
+/* Notification badges */
+.notification-badge {
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.notification-badge.overdue {
+  background-color: #ff4d6d;
+  color: white;
+}
+
+.notification-badge.due-soon {
+  background-color: #ffa502;
+  color: white;
+}
+
+/* Category badge */
+.category-badge {
+  background-color: #f78fb3;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+.notification {
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeInOut 3s ease forwards;
+}
+
+.notification.success {
+  background: #2ecc71;
+  color: white;
+}
+
+.notification.error {
+  background: #e74c3c;
+  color: white;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
