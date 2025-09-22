@@ -1,202 +1,267 @@
 /* General container */
 .container {
   max-width: 600px;
-  margin: 50px auto;
-  background: white;
-  padding: 25px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-/* Page title */
+/* Title */
 h1 {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #e84393;
+  margin-bottom: 15px;
+  color: #333;
 }
 
-/* Form styling */
+/* 🚪 Logout button */
+button.logout-btn {
+  background: #e91e63; /* pink */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background 0.3s, transform 0.1s;
+}
+
+.logout-btn:hover {
+  background: #d81b60; /* darker pink */
+  transform: scale(1.05);
+}
+
+/* Task form */
 .task-form {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: center;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 .task-form input,
 .task-form select {
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
 }
 
 .add-btn {
-  background-color: #ff6b81;
+  background: #4caf50;
   color: white;
   border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
 .add-btn:hover {
-  background-color: #e84118;
+  background: #388e3c;
 }
 
 /* Task list */
 ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 li {
-  background: #f8f9fa;
-  margin-bottom: 12px;
-  padding: 12px;
-  border-radius: 10px;
+  background: #f9f9f9;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
 .task-text {
-  flex: 1;
-  text-align: left;
   cursor: pointer;
 }
 
 .task-text.completed {
   text-decoration: line-through;
-  color: #aaa;
+  color: gray;
 }
 
-/* Due date styling */
+/* Due date + priority + category */
 .due-date {
-  font-size: 12px;
-  color: #555;
   margin-left: 8px;
-}
-
-/* Priority labels */
-.priority {
-  padding: 5px 10px;
-  border-radius: 8px;
   font-size: 12px;
-  font-weight: 600;
-  margin-left: 10px;
+  color: #777;
 }
 
 .priority.low {
-  background: #dff9fb;
-  color: #22a6b3;
+  color: green;
+  margin-left: 6px;
+  font-weight: bold;
 }
 
 .priority.medium {
-  background: #fff8e1;
-  color: #e1b12c;
+  color: orange;
+  margin-left: 6px;
+  font-weight: bold;
 }
 
 .priority.high {
-  background: #ffe6e6;
-  color: #e74c3c;
+  color: red;
+  margin-left: 6px;
+  font-weight: bold;
 }
 
-/* Delete button */
+.category-badge {
+  background: #eee;
+  padding: 2px 6px;
+  margin-left: 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Buttons */
 .delete-btn {
-  background: #ff4757;
+  background: #f44336;
   color: white;
   border: none;
-  padding: 6px 12px;
+  padding: 5px 10px;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 12px;
-  margin-left: 10px;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
 .delete-btn:hover {
-  background: #e84118;
+  background: #c62828;
 }
 
-/* Clear all button */
 .clear-btn {
-  margin-top: 15px;
-  background: #576574;
+  background: #ff9800;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: 600;
+  margin-top: 15px;
+  transition: background 0.3s;
 }
 
 .clear-btn:hover {
-  background: #2f3542;
+  background: #ef6c00;
 }
 
-/* Notification badges */
-.notification-badge {
-  font-weight: 600;
-  padding: 5px 10px;
-  border-radius: 12px;
-  font-size: 12px;
-  margin-left: 10px;
-  white-space: nowrap;
-}
-
-.notification-badge.overdue {
-  background-color: #ff4d6d;
-  color: white;
-}
-
-.notification-badge.due-soon {
-  background-color: #ffa502;
-  color: white;
-}
-
-/* Category badge */
-.category-badge {
-  background-color: #f78fb3;
-  color: white;
-  padding: 5px 12px;
-  border-radius: 14px;
-  font-size: 13px;
-  font-weight: 600;
-  margin-left: 10px;
-  text-transform: uppercase;
-}
+/* Notifications */
 .notification {
-  padding: 10px 15px;
-  border-radius: 8px;
   margin-bottom: 15px;
-  font-weight: bold;
-  text-align: center;
-  animation: fadeInOut 3s ease forwards;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
 .notification.success {
-  background: #2ecc71;
-  color: white;
+  background: #c8e6c9;
+  color: #256029;
 }
 
 .notification.error {
-  background: #e74c3c;
-  color: white;
+  background: #ffcdd2;
+  color: #b71c1c;
+}
+/* ===== Login & Register Wrapper ===== */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  font-family: 'Arial', sans-serif;
 }
 
-@keyframes fadeInOut {
-  0% { opacity: 0; transform: translateY(-10px); }
-  10% { opacity: 1; transform: translateY(0); }
-  90% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-10px); }
+/* ===== Login Card ===== */
+.login-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.login-card h2 {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* ===== Input Fields ===== */
+.login-card input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-card input:focus {
+  border-color: #e91e63;
+  box-shadow: 0 0 5px rgba(233, 30, 99, 0.5);
+}
+
+/* ===== Buttons ===== */
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-card button:hover {
+  background: #d81b60;
+  transform: translateY(-2px);
+}
+
+/* ===== Error Message ===== */
+.error {
+  color: #e91e63;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ===== Switch to Register/Login ===== */
+.login-card p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.login-card p span {
+  color: #e91e63;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===== Fade In Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
